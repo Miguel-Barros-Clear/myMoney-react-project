@@ -21,13 +21,13 @@ const debtSchema = new mongoose.Schema({
     value: {
         type: Number,
         min: 0,
-        required: true
+        required: [true, 'Informe o valor do débito!']
     },
     status: {
         type: String,
         required: false,
         uppercase: true,
-        enum: ['PAGO', 'PENDENTE', 'AGENDADO'],
+        enum: ['PAGO', 'PENDENTE', 'AGENDADO']
     }
 })
 
@@ -39,13 +39,13 @@ const billingCycleSchema = new mongoose.Schema({
     month: {
         type: Number,
         min: 1,
-        min: 12,
+        max: 12,
         required: true
     },
-    month: {
+    year: {
         type: Number,
         min: 1970,
-        min: 2100,
+        max: 2100,
         required: true
     },
     credits: [creditSchema],
