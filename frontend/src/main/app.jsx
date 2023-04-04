@@ -1,6 +1,8 @@
 import "../common/template/dependecies";
 import React from "react";
 
+import Routes from "./routes";
+
 import Header from "../common/template/header";
 import Sidebar from "../common/template/sidebar";
 import Footer from "../common/template/footer";
@@ -11,7 +13,7 @@ export default function App() {
       <Header />
       <Sidebar />
       <div className="content-wrapper">
-        <h1>Conteudo</h1>
+        <Routes />
       </div>
       <Footer />
     </div>
