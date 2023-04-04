@@ -1,5 +1,15 @@
-import React from "react";
+import React, { Component } from "react";
 
-export default function Dashboard(props) {
-  return <div>Dashboard</div>;
+import ContentHeader from "../common/template/contentHeader";
+import Content from "../common/template/content";
+
+export default class Dashboard extends Component {
+  render() {
+    return (
+      <div>
+        <ContentHeader title="Dashboard" small="Versão 1.0" />
+        <Content>Dashboard</Content>
+      </div>
+    );
+  }
 }
